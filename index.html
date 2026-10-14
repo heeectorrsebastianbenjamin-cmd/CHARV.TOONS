@@ -100,11 +100,12 @@
       background-color: #601818;
     }
 
-    /* Contenedor Principal */
+    /* Contenedor Principal (Reproductor a la izquierda, Sebastián a la derecha) */
     main {
       width: 100%;
       max-width: 1200px;
       display: flex;
+      flex-direction: row-reverse; /* Invierte las posiciones en PC */
       justify-content: space-between;
       align-items: flex-end;
       padding: 40px 20px;
@@ -112,7 +113,7 @@
       position: relative;
     }
 
-    /* Personaje Lateral (Sebastián) */
+    /* Personaje Lateral (Sebastián) en el lado derecho */
     .character-container {
       width: 35%;
       display: flex;
@@ -126,7 +127,7 @@
       height: auto;
     }
 
-    /* Reproductor de SWF / Pantalla de Inicio */
+    /* Reproductor de SWF / Pantalla de Inicio en el lado izquierdo */
     .screen-container {
       width: 60%;
       background-color: #ffca43;
@@ -226,7 +227,6 @@
 
       .character-container {
         width: 100%;
-        order: 2; /* Sebastián se muestra debajo de la pantalla en móvil */
       }
 
       .character-container img {
@@ -255,7 +255,12 @@
 
   <!-- Cuerpo de la página -->
   <main>
-    <!-- Pantalla central ejecutando la animación SWF -->
+    <!-- Personaje Sebastián (a la derecha en PC) -->
+    <div class="character-container">
+      <img src="seba.what.png" alt="Sebastián Charv Toons">
+    </div>
+
+    <!-- Pantalla central ejecutando la animación SWF (a la izquierda en PC) -->
     <div class="screen-container">
       <div class="screen-inner">
         <div class="video-box">
@@ -265,11 +270,6 @@
           <h2>NUEVO</h2>
         </div>
       </div>
-    </div>
-
-    <!-- Personaje Sebastián -->
-    <div class="character-container">
-      <img src="seba.what.png" alt="Sebastián Charv Toons">
     </div>
   </main>
 
